@@ -30,7 +30,7 @@ class ImgToBase64(object):
         result_wrapper = 'base64 is ready! :)\n=======\n{result}\n======='
 
         with open(self.file_path, 'rb') as f:
-            self.result = 'data:{type};base64, {file}'.format(type=self.file_type, file=base64.b64encode(f.read()))
+            self.result = 'data:{type};base64,{file}'.format(type=self.file_type, file=base64.b64encode(f.read()))
 
         for option in self.options:
             option_name = '_option_{option}'.format(option=option.replace('-', ''))
